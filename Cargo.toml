@@ -17,13 +17,13 @@ sdp = "0.5.1"
 mdns = { package = "webrtc-mdns", version = "0.4.2" }
 stun = "0.4.2"
 turn = "0.5.4"
-ice = { package = "webrtc-ice", version = "0.6.6" }
+ice = { package = "webrtc-ice", version = "0.7.0" }
 dtls = { package = "webrtc-dtls", version = "0.5.2" }
 rtp = "0.6.5"
 rtcp = "0.6.5"
 srtp = { package = "webrtc-srtp", version = "0.8.9" }
-sctp = { package = "webrtc-sctp", version = "0.4.3" }
-data = { package = "webrtc-data", version = "0.3.3" }
+sctp = { package = "webrtc-sctp", version = "0.5.0" }
+data = { package = "webrtc-data", version = "0.3.3", git = "https://github.com/webrtc-rs/data.git", branch = "main" }
 media = { package = "webrtc-media", version = "0.4.5" }
 interceptor = "0.7.6"
 tokio = { version = "1.15.0", features = ["full"] }
