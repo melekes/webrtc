@@ -12,13 +12,13 @@ repository = "https://github.com/webrtc-rs/webrtc"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-util = { package = "webrtc-util", version = "0.5.4" }
+util = { package = "webrtc-util", version = "0.5.3" }
 sdp = "0.5.1"
 mdns = { package = "webrtc-mdns", version = "0.4.2" }
 stun = "0.4.2"
 turn = "0.5.4"
 ice = { package = "webrtc-ice", version = "0.7.0" }
-dtls = { package = "webrtc-dtls", version = "0.5.2", git = "https://github.com/melekes/webrtc-dtls.git", branch = "anton/old-elliptic-curve" }
+dtls = { package = "webrtc-dtls", version = "0.5.2" }
 rtp = "0.6.5"
 rtcp = "0.6.5"
 srtp = { package = "webrtc-srtp", version = "0.8.9" }
@@ -26,12 +26,12 @@ sctp = { package = "webrtc-sctp", version = "0.5.0" }
 data = { package = "webrtc-data", version = "0.3.3" }
 media = { package = "webrtc-media", version = "0.4.5" }
 interceptor = "0.7.6"
-tokio = { version = "1.19", features = ["full"] }
+tokio = { version = "1.15", features = ["full"] }
 log = "0.4"
-async-trait = "0.1.56"
+async-trait = "0.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-rand = "0.8.5"
+rand = "0.8.4"
 bytes = "1"
 thiserror = "1.0"
 waitgroup = "0.1.2"
@@ -43,16 +43,6 @@ ring = "0.16.20"
 sha2 = "0.10.2"
 lazy_static = "1.4"
 hex = "0.4.3"
-
-# TODO: remove once webrtc-* crates have new releases
-[patch.crates-io]
-mdns = { package = "webrtc-mdns", version = "0.4.2", git = "https://github.com/webrtc-rs/mdns.git", branch = "main" }
-ice = { package = "webrtc-ice", version = "0.7.0", git = "https://github.com/webrtc-rs/ice.git", branch = "main" }
-dtls = { package = "webrtc-dtls", version = "0.5.2", git = "https://github.com/melekes/webrtc-dtls.git", branch = "anton/old-elliptic-curve" }
-srtp = { package = "webrtc-srtp", version = "0.8.9", git = "https://github.com/webrtc-rs/srtp.git", branch = "main" }
-sctp = { package = "webrtc-sctp", version = "0.5.0", git = "https://github.com/webrtc-rs/sctp.git", branch = "main" }
-data = { package = "webrtc-data", version = "0.3.3", git = "https://github.com/webrtc-rs/data.git", branch = "anton/new-sctp" }
-media = { package = "webrtc-media", version = "0.4.5", git = "https://github.com/webrtc-rs/media.git", branch = "main" }
 
 [dev-dependencies]
 tokio-test = "0.4.0" # must match the min version of the `tokio` crate above
